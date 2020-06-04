@@ -4,11 +4,22 @@
   <meta charset="utf-8">
   <title>Formulaire</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  
 </head>
 <body>
-  ...
-  <!-- Le reste du contenu -->
-  ...
+
+    
+    <form>
+        <div id='message-error'></div>
+        <label>Contactez moi</label>
+        <input class='nom' type="text" placeholder="Nom"/>
+        <input class='email' type='email' placeholder="Email" />
+        <textarea class='message' type='text' placeholder="Message" rows='7' cols='22'></textarea>
+        <!-- captcha a ajouté -->
+        <button id='submit' type="submit">Envoyer</button>
+    </form>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
