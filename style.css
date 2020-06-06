@@ -2,24 +2,38 @@ body{
     margin: 0px;
     padding: 0px;
     height:100vh;
-    background-color: black;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+@keyframes spin {
+    100% 
+    { 
+        -webkit-transform: rotate(360deg); transform:rotate(720deg); 
+    } 
+}
+
+.contact-me{
+    width:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 15px 15px 40px black;
+}
+
+#message-error{
+    height:80px;
+}
+
 #formulaire{
-    width:30%;
+    width:50%;
     padding: 6%;
-    color:white;
-    text-align: center;
+    text-align: left;
     display:flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    background-color: rgb(30,30,30);
 }
 
 form{
@@ -28,10 +42,53 @@ form{
     flex-direction: column; 
 }
 
+form h3{
+    color:rgb(172, 172, 172);
+}
+
 form input, form textarea{
     margin-bottom: 10%;
-    color:white;
     border:none;
-    border-bottom: 2px solid rgb(71, 71, 71);
-    background-color: rgb(29, 29, 29);
+    border-bottom: 2px solid rgba(71, 71, 71, 0.493);
+}
+
+input:focus, textarea:focus{
+    outline-style:none;
+}
+
+.social-network{
+    height:100%;
+    width: 50%;
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('tablet-coffee2.jpg');
+    background-size: cover;
+    
+}
+
+.social-network .btn{
+    color:white;
+    text-align: left;
+    box-shadow: 2px 4px 8px black;
+    width:70%;
+    margin: 8%;
+}
+
+.social-network .btn-facebook{
+    background-color: #3B5998;
+}
+
+.social-network .btn-linkedin{
+    background-color: #007BB6;
+}
+
+.social-network .btn-github{
+    background-color: #444444;
+}
+
+.spinner{
+    animation:spin 1s linear infinite;
 }

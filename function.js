@@ -37,14 +37,14 @@ function checkForm(array){
 }
 
 function dangerBorder(element, boolean){
-   var resultat = boolean ? 'green' : 'red';
-   $(`.${element}`).css('border', `1px solid ${resultat}`)
+   var resultat = boolean ? 'rgba(71, 71, 71, 0.493)' : 'rgba(255 ,0 , 0, 0.393)';
+   $(`.${element}`).css('border-bottom', `1px solid ${resultat}`)
 }
 
 //verify if email is a real email
 function validateEmail(email)
 {
     var regexEmail = /^(?:[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/;
-    var resultat = !regexEmail.test(email) ? '<p  class="alert alert-danger" role="alert" >Votre email est invalide</p>': '';
+    var resultat = !regexEmail.test(email) ? '<p style="color:red;">Votre email est invalide</p>': '';
     return resultat;
 }
