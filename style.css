@@ -42,8 +42,8 @@ form{
     flex-direction: column; 
 }
 
-form h3{
-    color:rgb(172, 172, 172);
+form h3, .social-network h3{
+    color:rgb(173, 172, 172);
 }
 
 form input, form textarea{
@@ -71,7 +71,7 @@ input:focus, textarea:focus{
 
 .social-network .btn{
     color:white;
-    text-align: left;
+    text-align: center;
     box-shadow: 2px 4px 8px black;
     width:70%;
     margin: 8%;
